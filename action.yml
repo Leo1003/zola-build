@@ -8,7 +8,7 @@ inputs:
     default: '.'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/leo1003/zola-build:latest'
+  image: 'docker://ghcr.io/leo1003/zola-build:v0.0.4'
   env:
     SITE_DIR: ${{ inputs.siteDir }}
 brand:
