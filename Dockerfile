@@ -10,6 +10,9 @@ RUN cargo fetch
 RUN cargo install --path .
 
 FROM alpine:3.14
+
+RUN apk add libstdc++
+
 COPY --from=builder /usr/local/cargo/bin/zola /usr/local/bin/zola
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
