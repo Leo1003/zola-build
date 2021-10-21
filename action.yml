@@ -1,0 +1,16 @@
+name: 'Build Zola site'
+description: 'A blazing fast action to build your Zola website'
+author: 'Leo Chen'
+inputs:
+  siteDir:
+    description: 'the site directory to build'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/leo1003/zola-build:latest'
+  env:
+    SITE_DIR: ${{ inputs.siteDir }}
+brand:
+  icon: 'layout'
+  color: 'blue'
