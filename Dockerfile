@@ -1,6 +1,6 @@
 FROM rust:alpine3.14 AS builder
 
-RUN apk add musl-dev
+RUN apk add musl-dev build-base
 
 WORKDIR /usr/src/zola
 COPY zola/ .

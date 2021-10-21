@@ -3,7 +3,10 @@ on:
     branches:
       - master
     tags:
-      - "zola-v*"
+      - 'zola-v*'
+    paths-ignore:
+      - '**.md'
+      - 'action.yml'
   workflow_dispatch:
     {}
 env:
